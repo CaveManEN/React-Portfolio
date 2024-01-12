@@ -1,0 +1,365 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  background-image: url("/professional-portfolio/assets/images/hans-isaacson-iEKg9h5_hd4-unsplash.jpg");
+  background-size: auto;
+  filter:brightness(80%);
+  font-family:sans-serif;
+  color:white;
+}
+
+a {
+  color:white;
+  text-decoration: none;
+}
+
+p {
+  font-size: 20px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+}
+
+.site-structure {
+  max-width: 1280px;
+  margin:auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/professional-portfolio/assets/images/lo-fi.jpg");
+  min-height: 750px;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  padding-left: 60px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  font-weight: bold;
+  color:white;
+  text-align: center;
+  display: flex;
+  margin: 15px 0;
+}
+
+.hero h2 {
+  font-size: 30px;
+  font-weight: lighter;
+  color: white;
+  margin: 20px 0;
+}
+
+.hero p {
+  color: white;
+  max-width: 700px;
+}
+
+.hero img {
+  height: 400px;
+  width: 460px;
+  box-shadow: 0px 0px 10px black;
+  border-radius: 10px 10px 10px 10px;
+}
+
+.nav-btns {
+  margin: 25px 0;
+}
+
+.button {
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  font-size: 25px;
+  color: black;
+  background-color: peachpuff;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  position: relative;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: gray;
+  color: peachpuff;
+}
+
+.articles {
+  max-width: 1280px;
+  margin: 50px auto;
+}
+
+.articles h2 {
+  font-size: 46px;
+}
+
+.articles h2.article-heading {
+  position: relative;
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.articles h2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px;
+  height: 100%;
+  width: 2px;
+  background-color: white;
+}
+
+.articles h2:last-child::after {
+  display: none;
+}
+
+#about {
+  display: flex;
+}
+
+#about p {
+  margin-top: 20px;
+  margin-left: 100px;
+}
+
+#portfolio {
+  display: flex;
+  }
+
+#portfolio h2, #about h2 {
+  min-width: 20%;
+  max-width: 20%;
+  }
+
+#portfolio img {
+  margin: 50px;
+  border: white 5px solid;
+  box-shadow: 0px 0px 10px white;
+  border-radius: 10px 10px 10px 10px;
+  }
+
+#portfolio img:hover{
+  border-color:lawngreen;
+  filter: brightness(150%);
+  }
+
+#portfolio a {
+  font-size: 25px;
+  color: black;
+  }
+
+#portfolio .primary-project :hover{
+  color: darkgreen;
+  }
+
+#portfolio .secondary-projects :hover{
+  color:darkgreen;
+  }
+
+.primary-project {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  }
+
+.primary-image {
+  height: 600px;
+  width: 800px;
+  }
+
+.project-details {
+  display: block;
+  position: absolute;
+  background-color: darkgray;
+  padding: 6px;
+  left: 55px;
+  bottom: 65px;
+  display: flex;
+  flex-direction: column;
+  }
+
+.secondary-image {
+  height: 250px;
+  width: 300px;
+  }
+
+.secondary-projects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  max-width: 100%;
+  margin-left: 100px;
+}
+
+.secondary-projects a, .primary-project a {
+  position: relative;
+}
+
+.primary-project-name {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.primary-project-type {
+  font-size: 20px;
+  text-align: center;
+}
+
+.secondary-project-name {
+  font-size: 20px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.secondary-project-type {
+  font-size: 15px;
+  text-align: center;
+}
+
+#contact h2 {
+  min-width: 20%;
+  max-width: 20%;
+}
+
+#contact ul {
+  display: flex;
+  list-style: none;
+  padding: 20px;
+  flex-wrap: wrap;
+  margin-left: 250px;
+  margin-top: -65px; 
+}
+
+#contact ul li {
+  margin-left: 75px;
+  font-size: 25px;
+  text-decoration: underline;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 0.5em;
+  margin-bottom: 50px;
+}
+
+#contact a:hover {
+  font-weight: bolder;
+  }
+
+@media screen and (max-width: 1200px) {
+  .site-structure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: auto;
+    Padding: 20px;
+    background-repeat: no-repeat;
+  }
+
+  .hero h1,
+  .hero h2,
+  .hero p {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    display: flex;
+    margin: 15px 0;
+    margin-left: 75px;
+  }
+
+  .hero p {
+    margin-bottom: 50px;
+    font: 14px;
+  }
+
+  .hero img {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    max-width: auto;
+    margin-bottom: 0px;
+    margin-top: 30px;
+    margin-left: 60px;
+  }
+
+  .button {
+    position: static;
+    margin: 10px;
+    left: auto;
+    bottom: auto;
+  }
+
+  #about h2, #portfolio h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .primary-image {
+    height: 400px;
+    width: 500px;
+  }
+
+  .secondary-image {
+    height: 150px;
+    width: 200px;
+  }
+
+  .project-details {
+    font-size: 14px;
+  }
+
+  .primary-project-name {
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .primary-project-type {
+    font-size: 10px;
+    text-align: center;
+  }
+  
+  .secondary-project-name {
+    font-size: 15px;
+    text-align: center;
+    font-weight: bolder;
+  }
+  
+  .secondary-project-type {
+    font-size: 10px;
+    text-align: center;
+  }
+
+  #contact h2 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .articles h2::after,
+  .port-content::after,
+  #contact ul::after {
+    display: none;
+  }
+}

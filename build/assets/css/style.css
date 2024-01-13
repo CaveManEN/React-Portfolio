@@ -1,0 +1,220 @@
+/* Reset CSS */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+/* Body Styles */
+body {
+  background-color: #121212;
+  color: #fff;
+  font-family: 'Teko', sans-serif;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Anchor Styles */
+a {
+  color: #6bf;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #19b;
+}
+
+/* Site Structure */
+.site-structure {
+  max-width: 1200px;
+  
+}
+
+/* Header Styles */
+header {
+  position: relative;
+  background-image: url("./assets/images/cyberpunk.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin-right: 30%;
+}
+
+.hero-content {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  width: 80%;
+  max-width: 600px;
+  margin-left: 22.5%;
+  
+}
+
+/* Hero Heading Styles */
+.hero h1 {
+  font-size: 72px;
+  font-weight: bold;
+  color: #6bf;
+  margin: 15px 0;
+  font-family: 'Teko', sans-serif;
+}
+
+/* Hero Subheading Styles */
+.hero h2 {
+  font-size: 36px;
+  font-weight: lighter;
+  color: #6bf;
+  margin: 20px 0;
+}
+
+/* Navigation Button Styles */
+.nav-btns {
+  margin: 25px 0;
+}
+
+/* Button Styles */
+.button {
+  border: 2px solid #6bf;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  color: #6bf;
+  background-color: #121212;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #6bf;
+  color: #121212;
+}
+
+
+#intro {
+  text-align: center;
+  margin-top: 50px; /* Adjust the margin based on your design preference */
+}
+
+.ian-portrait {
+  width: 100%; /* Ensure the image takes the full width of its container */
+  max-width: 400px; /* Adjust the maximum width based on your design preference */
+  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
+  box-shadow: 0px 0px 20px #6bf; /* Optional: Add box shadow for a subtle effect */
+  margin-left: 15%;
+}
+
+
+/* Articles Section Styles */
+.articles {
+  max-width: 1200px;
+  margin: 50px auto;
+  overflow: hidden; /* Hide overflowing content */
+}
+
+.articles h2 {
+  font-size: 36px;
+  color: #6bf;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.articles h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background-color: #6bf;
+  margin: 10px auto;
+}
+
+/* About and Portfolio Section Styles */
+#about, #portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#about, #portfolio h2 {
+  font-size: 48px;
+  color: #6bf;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Portfolio Image Styles */
+#portfolio {
+  text-align: center;
+}
+
+#portfolio img {
+  max-width: 100%; /* Ensure images don't exceed their container */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px;
+  border: 2px solid #6bf;
+  box-shadow: 0px 0px 20px #6bf;
+  border-radius: 10px;
+  transition: border-color 0.3s, filter 0.3s;
+}
+
+#portfolio img:hover {
+  border-color: #19b;
+  filter: brightness(120%);
+}
+
+/* Contact Section Styles */
+#contact {
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 48px;
+  color: #6bf;
+  margin-bottom: 20px;
+}
+
+/* Contact List Styles */
+#contact ul {
+  list-style: none;
+  padding: 20px;
+}
+
+#contact ul li {
+  margin: 10px;
+  font-size: 24px;
+  color: #aaa;
+  text-decoration: underline;
+}
+
+#contact a:hover {
+  color: #6bf;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1200px) {
+  /* Responsive Styles */
+  .site-structure {
+    padding: 10px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero h2 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+}

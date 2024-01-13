@@ -4,12 +4,25 @@
   "description": "## Description",
   "main": "index.js",
   "scripts": {
-    "build": "npm run build"
-  },  
+    "build": "react-scripts build"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "react-router-dom": "^6.20.1"
+    "react-router-dom": "^6.20.1",
+    "react-scripts": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

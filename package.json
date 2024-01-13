@@ -4,8 +4,8 @@
   "description": "## Description",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "build": "npm run build"
+  },  
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -1,3 +1,4 @@
+
 /* Reset CSS */
 * {
   box-sizing: border-box;
@@ -10,7 +11,7 @@ body {
   background-color: #121212;
   color: #fff;
   font-family: 'Teko', sans-serif;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 /* Anchor Styles */
@@ -23,37 +24,40 @@ a:hover {
   color: #19b;
 }
 
-/* Site Structure */
-.site-structure {
-  max-width: 1200px;
+/* GIF Container */
+.gif-container {
+  position: sticky;
+  width: 100%;
+  height: 100vh;
+  background-image: url("./assets/images/Video.GIF");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   
 }
 
 /* Header Styles */
 header {
   position: relative;
-  background-image: url("./assets/images/cyberpunk.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  margin-right: 30%;
+  width: 100%;
+  margin-bottom: 45px;
+  
 }
 
+/* Hero Content Styles */
 .hero-content {
   position: absolute;
-  top: 38%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   width: 80%;
   max-width: 600px;
-  margin-left: 22.5%;
-  
+  box-shadow: 0 0 50px #6bf;
 }
 
 /* Hero Heading Styles */
@@ -61,8 +65,6 @@ header {
   font-size: 72px;
   font-weight: bold;
   color: #6bf;
-  margin: 15px 0;
-  font-family: 'Teko', sans-serif;
 }
 
 /* Hero Subheading Styles */
@@ -70,12 +72,6 @@ header {
   font-size: 36px;
   font-weight: lighter;
   color: #6bf;
-  margin: 20px 0;
-}
-
-/* Navigation Button Styles */
-.nav-btns {
-  margin: 25px 0;
 }
 
 /* Button Styles */
@@ -88,8 +84,6 @@ header {
   color: #6bf;
   background-color: #121212;
   cursor: pointer;
-  text-align: center;
-  text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
   display: inline-block;
 }
@@ -99,26 +93,33 @@ header {
   color: #121212;
 }
 
+/* Site Structure */
+.site-structure {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 15px;
+}
 
+/* Intro Section Styles */
 #intro {
   text-align: center;
-  margin-top: 50px; /* Adjust the margin based on your design preference */
+  margin-top: 50px;
 }
 
 .ian-portrait {
-  width: 100%; /* Ensure the image takes the full width of its container */
-  max-width: 400px; /* Adjust the maximum width based on your design preference */
-  border-radius: 10px; /* Optional: Add border-radius for rounded corners */
-  box-shadow: 0px 0px 20px #6bf; /* Optional: Add box shadow for a subtle effect */
-  margin-left: 15%;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #6bf;
 }
-
 
 /* Articles Section Styles */
 .articles {
   max-width: 1200px;
   margin: 50px auto;
-  overflow: hidden; /* Hide overflowing content */
+  padding: 0 10px;
 }
 
 .articles h2 {
@@ -134,7 +135,7 @@ header {
   width: 50px;
   height: 2px;
   background-color: #6bf;
-  margin: 10px auto;
+  margin: auto;
 }
 
 /* About and Portfolio Section Styles */
@@ -144,27 +145,38 @@ header {
   justify-content: center;
 }
 
-#about, #portfolio h2 {
+.about-paragraphs p {
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 5%;
+  
+}
+
+#about h2, #portfolio h2 {
   font-size: 48px;
   color: #6bf;
   margin-bottom: 20px;
-  text-align: center;
+  width: 100%;
 }
 
 /* Portfolio Image Styles */
-#portfolio {
-  text-align: center;
-}
-
 #portfolio img {
-  max-width: 100%; /* Ensure images don't exceed their container */
-  height: auto; /* Maintain aspect ratio */
-  margin: 20px;
+  display: block;
+  max-width: 100%;
+  height: auto;
   border: 2px solid #6bf;
-  box-shadow: 0px 0px 20px #6bf;
+  box-shadow: 0 0 20px #6bf;
   border-radius: 10px;
   transition: border-color 0.3s, filter 0.3s;
 }
+.primary-project, .secondary-projects {
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack children vertically */
+  margin-bottom: 20px; /* Add some space between items */
+}
+
 
 #portfolio img:hover {
   border-color: #19b;
@@ -182,10 +194,9 @@ header {
   margin-bottom: 20px;
 }
 
-/* Contact List Styles */
 #contact ul {
   list-style: none;
-  padding: 20px;
+  padding: 0;
 }
 
 #contact ul li {
@@ -200,21 +211,74 @@ header {
   font-weight: bold;
 }
 
+/* Responsive Styles */
 @media screen and (max-width: 1200px) {
-  /* Responsive Styles */
+  .gif-container img {
+    height: 60vh;
+    width: 100%;
+    
+  }
+
+  header {
+    height: 60vh;
+    min-height: 40vh;
+    background-size: auto 100%;
+  }
+
   .site-structure {
-    padding: 10px;
+    padding: 0 0px;
+  }
+
+  .hero-content {
+    top: 30%;
+    width: 95%;
+    padding: 15px;
+    
   }
 
   .hero h1 {
-    font-size: 48px;
+    font-size: 36px;
   }
 
   .hero h2 {
-    font-size: 24px;
+    font-size: 18px;
   }
 
-  .hero p {
+  .button {
+    padding: 8px 15px;
     font-size: 16px;
   }
+
+  #intro {
+    margin-top: -10px;
+  }
+
+  .ian-portrait {
+    margin-top: -10px;
+  }
+
+  .about-paragraphs p {
+    font-size: 20px;
+    margin-bottom: 5%;
+   
+  }
+
+  .primary-project-name, .secondary-project-name {
+    margin-bottom: 3%;
+    text-align: center;
+  }
+  .primary-project, .secondary-projects {
+    text-align: center; /* Center the content */
+    margin: auto; /* Optional: Center the articles themselves if needed */
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .primary-project img, .secondary-projects img {
+    max-width: 95%; /* Larger width on smaller screens */
+    max-height: 300px; /* Adjust height as needed */
+  }
+ 
+ 
+ 
 }
